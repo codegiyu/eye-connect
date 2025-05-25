@@ -1,0 +1,10 @@
+export { default as Facebook } from './Facebook';
+export { default as Instagram } from './Instagram';
+export { default as Linkedin } from './Linkedin';
+export { default as LoadingLine } from './LoadingLine';
+export { default as Mail } from './Mail';
+export { default as Phone } from './Phone';
+export { default as Twitter } from './Twitter';
+export { default as ZenliftLogoStar } from './ZenliftLogoStar';
+export { default as ZenliftLogo } from './ZenliftLogo';
+export { default as ZenliftStar } from './ZenliftStar';
