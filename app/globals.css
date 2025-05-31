@@ -117,37 +117,37 @@
 
   /* Typography */
   .typo-h1 {
-    @apply font-manrope text-[4rem] leading-[1.4];
+    @apply font-manrope text-[2.75rem] sm:text-[4rem] leading-[1.2] font-medium sm:font-normal;
   }
   .typo-h2 {
-    @apply font-manrope text-[3.5rem] leading-[1.4];
+    @apply font-manrope text-[2.125rem] sm:text-[3.5rem] leading-[1.4];
   }
   .typo-h3 {
-    @apply font-manrope text-[3rem] leading-[1.4];
+    @apply font-manrope text-[2rem] sm:text-[3rem] leading-[1.4];
   }
   .typo-h4 {
-    @apply font-manrope text-[2.25rem] leading-[1.4] font-medium;
+    @apply font-manrope text-[1.5rem] sm:text-[2.25rem] leading-[1.4] font-medium;
   }
   .typo-h5 {
-    @apply font-manrope text-[1.5rem] leading-[1.4] font-medium;
+    @apply font-manrope text-[1rem] sm:text-[1.5rem] leading-[1.4] font-medium;
   }
   .typo-h6 {
-    @apply font-manrope text-[1.25rem] leading-[1.4] font-medium;
+    @apply font-manrope text-[1rem] sm:text-[1.25rem] leading-[1.4] font-medium;
   }
   .typo-subtitle {
-    @apply font-marcel text-[1rem] leading-none tracking-[0.12em];
+    @apply font-marcel text-[0.75rem] sm:text-[1rem] leading-none tracking-[0.12em];
   }
   .typo-body1 {
-    @apply font-manrope text-[1.125rem] leading-[1.6] font-medium;
+    @apply font-manrope text-[0.875rem] sm:text-[1.125rem] leading-[1.6] font-medium;
   }
   .typo-body2 {
-    @apply font-manrope text-[1rem] leading-[1.6];
+    @apply font-manrope text-[0.75rem] sm:text-[1rem] leading-[1.6];
   }
   .typo-body3 {
-    @apply font-manrope text-[0.875rem] leading-[1.6];
+    @apply font-manrope text-[0.625rem] sm:text-[0.875rem] leading-[1.6];
   }
   .typo-quote {
-    @apply font-marcel text-[3rem] leading-none;
+    @apply font-marcel text-[2.25rem] sm:text-[3rem] leading-none;
   }
   .typo-caption1 {
     @apply font-marcel text-[0.75rem] leading-[1.3];

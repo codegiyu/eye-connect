@@ -11,6 +11,7 @@ import { type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 import { LoadingLine } from '../icons';
 import Link from 'next/link';
+import { omit } from 'lodash';
 
 export interface ZenButtonProps
   extends ComponentProps<'button'>,
@@ -58,9 +59,8 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
     },
     ref
   ) => {
-    const Comp = 'button';
     const fullWrapClassName = cn(
-      `inline-block ${!!onDisabledClick && disabled ? 'cursor-pointer' : 'cursor-default'} focus:outline-none focus-visible:outline-white/60 focus-visible:outline-2 outline-offset-2`,
+      `inline-block ${!!onDisabledClick && disabled ? 'cursor-pointer focus-visible:outline-gray-border focus-visible:outline-1' : 'cursor-default'} focus:outline-none focus-visible:outline-white/60 focus-visible:outline-2 outline-offset-2`,
       size === 'full' ? 'w-full' : '',
       wrapClassName
     );
@@ -78,11 +78,12 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
       }),
     };
     const mainEl = (
-      <Comp
+      <button
         className={cn(buttonVariants({ size, variant, className }))}
         ref={ref}
         disabled={loading || disabled}
-        {...props}>
+        aria-label={props['aria-label'] || text || 'button'}
+        {...omit(props, ['aria-label'])}>
         {loading && children ? (
           <i className={cn('typo-body1 text-primary-green animate-spin', loadingIconClassName)}>
             <LoadingLine />
@@ -119,7 +120,7 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
             )}
           </>
         )}
-      </Comp>
+      </button>
     );
 
     return (

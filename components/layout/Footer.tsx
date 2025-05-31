@@ -15,10 +15,10 @@ const Footer = ({ className, ...props }: FooterProps) => {
           <div className="w-fit grid gap-5">
             <ZenButton variant="ghost" size="icon" className="" href="/">
               <div className="w-fit flex items-center gap-5">
-                <i className="text-[3rem] text-primary-dark">
+                <i className="text-[2.25rem] sm:text-[3rem] text-primary-dark">
                   <ZenliftLogoStar />
                 </i>
-                <h2 className="font-marcel text-[2.5rem] leading-none tracking-[0.12em] text-dark-primary uppercase">
+                <h2 className="font-marcel text-[1.75rem] sm:text-[2.5rem] leading-none tracking-[0.12em] text-dark-primary uppercase">
                   Zenlift
                 </h2>
               </div>
@@ -44,7 +44,11 @@ const Footer = ({ className, ...props }: FooterProps) => {
             <p className="">|</p>
             <p className="">
               Built by{' '}
-              <a href="https://portfolio-codegiyu.vercel.app" className="underline">
+              <a
+                href="https://portfolio-codegiyu.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline">
                 Codegiyu
               </a>
             </p>
@@ -104,7 +108,7 @@ const footerLinks: FooterLinksGroupProps[] = [
 
 const FooterLinksGroup = ({ groupName, links }: FooterLinksGroupProps) => {
   return (
-    <div className="w-fit grid gap-5 px-5">
+    <div className="w-fit grid gap-5 sm:px-5">
       <h3 className="typo-h6 text-dark-primary">{groupName}</h3>
       <nav className="w-fit grid gap-2.5">
         {links.map(({ text, link }, idx) => (

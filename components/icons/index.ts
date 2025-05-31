@@ -1,4 +1,5 @@
 export { default as Facebook } from './Facebook';
+export { default as HeroBlur } from './HeroBlur';
 export { default as Instagram } from './Instagram';
 export { default as Linkedin } from './Linkedin';
 export { default as LoadingLine } from './LoadingLine';

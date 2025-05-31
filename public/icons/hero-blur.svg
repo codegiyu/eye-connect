@@ -1,0 +1,13 @@
+<svg width="510" height="510" viewBox="0 0 510 510" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="0.0410156" y="0.15979" width="839.064" height="855.907"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(15px);clip-path:url(#bgblur_0_7_25_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter0_f_7_25)" data-figma-bg-blur-radius="30">
+<path d="M352.13 604.027C290.893 585.606 260.463 503.813 252.902 465.219C237.433 416.192 285.653 356.572 374.135 341.98C462.618 327.387 431.863 255.838 531.135 250.265C610.553 245.807 591.45 384.116 571.972 453.828C524.206 511.57 413.366 622.448 352.13 604.027Z" fill="#D8FF9A"/>
+</g>
+<defs>
+<filter id="filter0_f_7_25" x="0.0410156" y="0.15979" width="839.064" height="855.907" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_7_25"/>
+</filter>
+<clipPath id="bgblur_0_7_25_clip_path" transform="translate(-0.0410156 -0.15979)"><path d="M352.13 604.027C290.893 585.606 260.463 503.813 252.902 465.219C237.433 416.192 285.653 356.572 374.135 341.98C462.618 327.387 431.863 255.838 531.135 250.265C610.553 245.807 591.45 384.116 571.972 453.828C524.206 511.57 413.366 622.448 352.13 604.027Z"/>
+</clipPath></defs>
+</svg>
