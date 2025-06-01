@@ -6,7 +6,7 @@ export interface SectionHeadingProps {
   subtitle?: string;
   subtext?: string;
   className?: string;
-  inDarkBg?: string;
+  inDarkBg?: boolean;
 }
 
 export const SectionHeading = ({

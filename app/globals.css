@@ -141,13 +141,13 @@
     @apply font-marcel text-[0.75rem] sm:text-[1rem] leading-none tracking-[0.12em];
   }
   .typo-body1 {
-    @apply font-manrope text-[0.875rem] sm:text-[1.125rem] leading-[1.6] font-medium;
+    @apply font-manrope text-[1rem] sm:text-[1.125rem] leading-[1.6] font-medium;
   }
   .typo-body2 {
-    @apply font-manrope text-[0.75rem] sm:text-[1rem] leading-[1.6];
+    @apply font-manrope text-[1rem] sm:text-[1rem] leading-[1.6];
   }
   .typo-body3 {
-    @apply font-manrope text-[0.625rem] sm:text-[0.875rem] leading-[1.6];
+    @apply font-manrope text-[0.875rem] sm:text-[0.875rem] leading-[1.6];
   }
   .typo-quote {
     @apply font-marcel text-[2.25rem] sm:text-[3rem] leading-none;
