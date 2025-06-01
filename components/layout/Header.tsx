@@ -1,14 +1,22 @@
+'use client';
 import { cn } from '@/lib/utils';
-import type { ComponentProps } from 'react';
+import { useState, type ComponentProps } from 'react';
 import { ZenButton } from '../atoms/ZenButton';
-import { HeroBlur, Mail, Phone, ZenliftLogoStar, ZenliftStar } from '../icons';
-import Link from 'next/link';
+import { HeroBlur, Menu, ZenliftStar } from '../icons';
+import { ContactButton } from '../atoms/ContactButton';
+import { YoutubeStoryBtn } from '../atoms/YoutubeStoryBtn';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '../ui/sheet';
+import { GhostButton } from '../atoms/GhostButton';
+import { LogoLink } from '../atoms/LogoLink';
+import { XIcon } from 'lucide-react';
 
 export { Header, type HeaderProps };
 
 type HeaderProps = ComponentProps<'header'>;
 
 const Header = ({ className, ...props }: HeaderProps) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <section className="w-full min-h-[25rem] bg-gray-text">
       <header
@@ -18,52 +26,83 @@ const Header = ({ className, ...props }: HeaderProps) => {
         )}
         {...props}>
         <section className="w-full flex items-center justify-between py-5">
-          <ZenButton variant="ghost" size="icon" className="" href="/">
-            <div className="w-fit flex items-center gap-5">
-              <i className="text-[2.25rem] sm:text-[2.5rem] text-primary">
-                <ZenliftLogoStar />
-              </i>
-              <h2 className="font-marcel text-[1.75rem] sm:text-[2.25rem] leading-none tracking-[0.12em] text-white uppercase">
-                Zenlift
-              </h2>
-            </div>
-          </ZenButton>
+          <LogoLink />
 
           <div className="w-fit h-max hidden lg:flex items-center gap-[1.875rem]">
-            <nav className="w-fit flex items-center gap-4">
-              {headerLinks.map((item, idx) => (
-                <HeaderLink key={idx} {...item} />
-              ))}
+            <nav className="w-fit">
+              <ul className="w-fit flex items-center gap-4">
+                {headerLinks.map((item, idx) => (
+                  <HeaderLink key={idx} {...item} />
+                ))}
+              </ul>
             </nav>
             <div className="w-[1px] h-4 bg-white"></div>
             <div className="w-fit flex items-center gap-2.5">
-              <ZenButton
-                variant="ghost"
-                size="icon"
-                className="w-[3.75rem] aspect-square bg-white/30 grid place-items-center rounded-full border border-white"
-                href="tel:+2348140629487">
-                <i className="text-white text-2xl">
-                  <Phone />
-                </i>
-              </ZenButton>
-              <ZenButton
-                variant="ghost"
-                size="icon"
-                className="w-[3.75rem] aspect-square grid place-items-center rounded-full border border-white"
-                href="mailto:eomegbu@gmail.com">
-                <i className="text-white text-2xl">
-                  <Mail />
-                </i>
-              </ZenButton>
+              <ContactButton type="phone" />
+              <ContactButton type="mail" />
             </div>
           </div>
+
+          <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+            <SheetTrigger className="w-fit lg:hidden outline-none" asChild>
+              <GhostButton
+                variant="ghost"
+                size="icon"
+                className="lg:hidden hover:bg-transparent"
+                Icon={Menu}
+                iconClass="text-white text-5xl"
+                onClick={() => setMenuOpen(prev => !prev)}
+              />
+            </SheetTrigger>
+            <SheetContent
+              side="left"
+              className="w-screen h-screen grid gap-0 p-0 border-none bg-transparent"
+              aria-describedby={undefined}>
+              <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+              <section className="w-full h-full flex-none bg-white py-5 px-5">
+                <div className="h-full flex flex-col justify-between">
+                  <div className="center-container w-full flex items-center justify-between">
+                    <LogoLink inLightBg />
+                    <GhostButton className="p-2" onClick={() => setMenuOpen(false)}>
+                      <XIcon className="size-5 text-red-500" />
+                    </GhostButton>
+                  </div>
+                  <nav className="w-full">
+                    <ul className="w-full grid items-center justify-items-center gap-14">
+                      {headerLinks.map((item, idx) => (
+                        <HeaderLink
+                          key={idx}
+                          {...item}
+                          afterClick={() => setMenuOpen(false)}
+                          inLightBg
+                        />
+                      ))}
+                      <li>
+                        <div className="w-full flex items-center justify-center gap-6">
+                          <ContactButton
+                            type="phone"
+                            onClick={() => setMenuOpen(false)}
+                            inWhiteBg
+                          />
+                          <ContactButton type="mail" onClick={() => setMenuOpen(false)} inWhiteBg />
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div className="w-full h-24">
+                    <p className=""></p>
+                  </div>
+                </div>
+              </section>
+            </SheetContent>
+          </Sheet>
         </section>
       </header>
 
       <section className="hero zen-container pt-[4.375rem] pb-[7.5rem] relative">
-        <div className="w-full grid gap-10 lg:flex justify-between text-white px-0 xl:px-10 1440:px-14 2xl:px-16 relative z-[2]">
-          <div className="w-full h-fit grid">
-            <div className="w-full max-w-[31.875rem] grid gap-6">
+        <div className="w-full grid gap-10 lg:flex justify-center lg:justify-between text-white px-0 xl:px-10 1440:px-14 2xl:px-16 relative z-[2]">
+          <div className="w-full max-w-[31.875rem] h-fit grid justify-self-center ">
+            <div className="w-full grid gap-6">
               <div className="w-full grid">
                 <p className="typo-subtitle uppercase">Zenlift - Mental Health</p>
                 <h1 className="typo-h1">Your Path to Mental Wellness Starts Here</h1>
@@ -72,29 +111,16 @@ const Header = ({ className, ...props }: HeaderProps) => {
                 Odio cras proin proin sit quis fringilla aliquet. Consectetur elementum viverra
                 egestas egestas nulla ullamcorper varius quam.
               </p>
-              <ZenButton text="Learn More" textClassName="uppercase" />
+              <div className="w-full flex items-center justify-between">
+                <ZenButton text="Learn More" textClassName="uppercase" />
+                <YoutubeStoryBtn className="lg:hidden" />
+              </div>
             </div>
           </div>
 
-          <div className="w-full h-fit flex-col items-end justify-between">
+          <div className="w-full h-fit hidden lg:flex flex-col items-end justify-between">
             <div className="w-full flex items-center justify-end mb-24">
-              <Link
-                href="https://youtu.be/f-1VlUNHowg?si=QygFlUMB1z8ibGme"
-                target="_blank"
-                rel="noreferrer noopener">
-                <div className="w-fit flex items-center gap-5">
-                  <p className="typo-body2 text-white">Watch Our Story</p>
-                  <div className="w-[3.75rem] aspect-square border-2 border-white rounded-full relative">
-                    <div
-                      className="w-[1.375rem] aspect-square bg-primary rounded-full grid place-items-center absolute 
-                      top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 text-[0.375rem] text-dark-secondary">
-                      <svg width="1em" height="1em" viewBox="0 0 24 24">
-                        <polygon points="0,0 24,12 0,24" fill="currentColor" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              <YoutubeStoryBtn className="hidden lg:block" />
             </div>
 
             <div className="w-full h-fit max-w-[19.75rem] bg-white rounded-xl overflow-hidden ml-auto">
@@ -129,6 +155,8 @@ const Header = ({ className, ...props }: HeaderProps) => {
 interface HeaderLinkProps {
   text: string;
   link: string;
+  inLightBg?: boolean;
+  afterClick?: () => void;
 }
 
 const headerLinks: HeaderLinkProps[] = [
@@ -137,15 +165,20 @@ const headerLinks: HeaderLinkProps[] = [
   { text: 'Services', link: '/#services' },
 ];
 
-const HeaderLink = ({ text, link }: HeaderLinkProps) => {
+const HeaderLink = ({ text, link, inLightBg, afterClick }: HeaderLinkProps) => {
   return (
-    <ZenButton
-      variant="ghost"
-      size="icon"
-      className="hover:underline hover:underline-offset-4 decoration-2 decoration-primary"
-      textClassName="typo-button text-white"
-      text={text}
-      href={link}
-    />
+    <li>
+      <ZenButton
+        variant="ghost"
+        size="icon"
+        className={`${inLightBg ? '' : 'hover:underline'} hover:underline-offset-4 decoration-2 decoration-primary`}
+        textClassName={`typo-button ${inLightBg ? 'text-dark-primary hover:text-primary-dark' : 'text-white'}`}
+        text={text}
+        href={link}
+        onClick={() => {
+          afterClick?.();
+        }}
+      />
+    </li>
   );
 };

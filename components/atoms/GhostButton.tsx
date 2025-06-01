@@ -11,7 +11,7 @@ const GhostButton = ({ children, Icon, iconClass, className, ...props }: GhostBu
   return (
     <ZenButton variant="ghost" size="icon" className={cn('p-0 flex-none', className)} {...props}>
       {Icon ? (
-        <i className={cn('text-2xl text-d-100', iconClass)}>
+        <i className={cn('text-2xl text-dark-primary', iconClass)}>
           <Icon />
         </i>
       ) : (

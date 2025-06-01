@@ -1,7 +1,8 @@
 import { cn } from '@/lib/utils';
 import type { ComponentProps, SVGProps, JSX } from 'react';
 import { ZenButton } from '../atoms/ZenButton';
-import { Facebook, Instagram, Linkedin, Twitter, ZenliftLogoStar } from '../icons';
+import { Facebook, Instagram, Linkedin, Twitter } from '../icons';
+import { LogoLink } from '../atoms/LogoLink';
 
 export { Footer, type FooterProps };
 
@@ -13,16 +14,7 @@ const Footer = ({ className, ...props }: FooterProps) => {
       <section className="w-full grid gap-[3.75rem] pt-16 pb-10">
         <div className="w-full grid md:grid-cols-[1fr_auto_auto] gap-[4.5rem]">
           <div className="w-fit grid gap-5">
-            <ZenButton variant="ghost" size="icon" className="" href="/">
-              <div className="w-fit flex items-center gap-5">
-                <i className="text-[2.25rem] sm:text-[3rem] text-primary-dark">
-                  <ZenliftLogoStar />
-                </i>
-                <h2 className="font-marcel text-[1.75rem] sm:text-[2.5rem] leading-none tracking-[0.12em] text-dark-primary uppercase">
-                  Zenlift
-                </h2>
-              </div>
-            </ZenButton>
+            <LogoLink size="large" inLightBg />
             <p className="max-w-[21rem] typo-body2 text-gray-text">
               {`Feel free to call us in working hours Mon - Fri {8:00 - 16.00}. Our team will be happy to help answer your queries`}
             </p>
@@ -38,10 +30,10 @@ const Footer = ({ className, ...props }: FooterProps) => {
           ))}
         </div>
 
-        <div className="w-full flex items-center justify-between border-t border-primary-light pt-6">
-          <div className="typo-body3 text-dark-secondary flex items-center gap-5">
+        <div className="w-full flex items-center justify-center sm:justify-between border-t border-primary-light pt-6">
+          <div className="typo-body3 text-dark-secondary flex flex-col sm:flex-row items-center gap-2 sm:gap-5">
             <p className="">Copyright &copy;{new Date().getFullYear()} Zenlift</p>
-            <p className="">|</p>
+            <p className="hidden sm:block">|</p>
             <p className="">
               Built by{' '}
               <a

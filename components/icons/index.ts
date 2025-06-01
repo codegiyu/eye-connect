@@ -4,6 +4,7 @@ export { default as Instagram } from './Instagram';
 export { default as Linkedin } from './Linkedin';
 export { default as LoadingLine } from './LoadingLine';
 export { default as Mail } from './Mail';
+export { default as Menu } from './Menu';
 export { default as Phone } from './Phone';
 export { default as Twitter } from './Twitter';
 export { default as ZenliftLogoStar } from './ZenliftLogoStar';

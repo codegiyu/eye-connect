@@ -5,6 +5,7 @@ import {
   forwardRef,
   type ComponentProps,
   type JSX,
+  MouseEvent,
 } from 'react';
 import { buttonVariants } from '../ui/button';
 import { type VariantProps } from 'class-variance-authority';
@@ -29,6 +30,7 @@ export interface ZenButtonProps
   loadingIconBesideText?: boolean;
   loadingIconClassName?: string;
   onDisabledClick?: () => void;
+  onClick?: (e?: MouseEvent<HTMLButtonElement>) => void;
   wrapClassName?: string;
   href?: string;
 }
@@ -126,7 +128,7 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
     return (
       <>
         {href && !disabled ? (
-          <Link href={href} className={fullWrapClassName}>
+          <Link href={href} onClick={() => props.onClick?.()} className={fullWrapClassName}>
             {mainEl}
           </Link>
         ) : (
