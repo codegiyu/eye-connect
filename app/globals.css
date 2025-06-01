@@ -114,6 +114,9 @@
   .zen-container {
     @apply w-full px-[1.125rem] sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24;
   }
+  .extra-padding-container {
+    @apply px-0 xl:px-10 1440:px-14 2xl:px-16;
+  }
 
   /* Typography */
   .typo-h1 {
@@ -123,7 +126,7 @@
     @apply font-manrope text-[2.125rem] sm:text-[3.5rem] leading-[1.4];
   }
   .typo-h3 {
-    @apply font-manrope text-[2rem] sm:text-[3rem] leading-[1.4];
+    @apply font-manrope text-[2rem] sm:text-[3rem] leading-[1.25] font-medium sm:font-normal;
   }
   .typo-h4 {
     @apply font-manrope text-[1.5rem] sm:text-[2.25rem] leading-[1.4] font-medium;

@@ -49,6 +49,7 @@ const Header = ({ className, ...props }: HeaderProps) => {
                 variant="ghost"
                 size="icon"
                 className="lg:hidden hover:bg-transparent"
+                wrapClassName="lg:hidden"
                 Icon={Menu}
                 iconClass="text-white text-5xl"
                 onClick={() => setMenuOpen(prev => !prev)}
@@ -100,7 +101,7 @@ const Header = ({ className, ...props }: HeaderProps) => {
       </header>
 
       <section className="hero zen-container pt-[4.375rem] pb-[7.5rem] relative">
-        <div className="w-full grid gap-10 lg:flex justify-center lg:justify-between text-white px-0 xl:px-10 1440:px-14 2xl:px-16 relative z-[2]">
+        <div className="w-full extra-padding-container grid gap-10 lg:flex justify-center lg:justify-between text-white relative z-[2]">
           <div className="w-full max-w-[31.875rem] h-fit grid justify-self-center ">
             <div className="w-full grid gap-6">
               <div className="w-full grid">
