@@ -7,8 +7,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -86,17 +84,17 @@
   --breakpoint-xl: 1280px;
   --breakpoint-1440: 1440px;
   --breakpoint-2xl: 1536px;
-  --color-primary: #D8FF9A;
-  --color-primary-dark: #6BA50F;
-  --color-primary-light: #F0FFD9;
-  --color-primary-green: #B8FF48;
+  --color-primary: #0AB1FF;
+  --color-primary-dark: #00628F;
+  --color-primary-light: #47C5FF;
+  --color-green: #B8FF48;
   --color-dark-primary: #222222;
   --color-dark-secondary: #232323;
   --color-light-gray-1: #FDFDFD;
   --color-light-gray-2: #F8F8F8;
-  --color-gray-text: #909090;
+  --color-gray-text: #707070;
   --color-gray-border: #E2E2E2;
-  --color-variant-bg: #DDEADE;
+  --color-variant-bg: #D6F2FF;
   --font-manrope: 'Manrope', sans-serif;
   --font-marcel: 'Marcellus', serif;
 }
@@ -120,7 +118,7 @@
 
   /* Typography */
   .typo-h1 {
-    @apply font-manrope text-[2.75rem] sm:text-[4rem] leading-[1.2] font-medium sm:font-normal;
+    @apply font-manrope text-[2.875rem] sm:text-[4rem] leading-[1.2] font-medium sm:font-normal;
   }
   .typo-h2 {
     @apply font-manrope text-[2.125rem] sm:text-[3.5rem] leading-[1.4];
@@ -163,6 +161,22 @@
   }
   .typo-display1 {
     @apply font-marcel text-[8rem] leading-[1.2];
+  }
+
+  .bg-hero {
+    background: linear-gradient(90deg, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../public/images/hero-bg-1.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+  .bg-outreach {
+    background: linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../public/images/outreach.jpg');
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .bg-story {
+    background: linear-gradient(90deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../public/images/story.png');
+    background-size: cover;
+    background-position: center center;
   }
 }
 

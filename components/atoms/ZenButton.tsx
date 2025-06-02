@@ -87,13 +87,13 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
         aria-label={props['aria-label'] || text || 'button'}
         {...omit(props, ['aria-label'])}>
         {loading && children ? (
-          <i className={cn('typo-body1 text-primary-green animate-spin', loadingIconClassName)}>
+          <i className={cn('typo-body1 text-green animate-spin', loadingIconClassName)}>
             <LoadingLine />
           </i>
         ) : !loading && children ? (
           children
         ) : loading && !loadingIconBesideText ? (
-          <i className={cn('typo-body1 text-primary-green animate-spin', loadingIconClassName)}>
+          <i className={cn('typo-body1 text-green animate-spin', loadingIconClassName)}>
             <LoadingLine />
           </i>
         ) : (
@@ -106,11 +106,7 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
             <div className="flex items-center gap-3">
               <span className={cn('font-marcel uppercase', textClassName)}>{text}</span>
               {loading && (
-                <i
-                  className={cn(
-                    'typo-body1 text-primary-green animate-spin',
-                    loadingIconClassName
-                  )}>
+                <i className={cn('typo-body1 text-green animate-spin', loadingIconClassName)}>
                   <LoadingLine />
                 </i>
               )}

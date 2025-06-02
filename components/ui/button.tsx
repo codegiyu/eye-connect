@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'bg-primary text-dark-secondary',
-        secondary: 'bg-dark-primary text-primary-green',
+        secondary: 'bg-dark-primary text-primary',
         ghost: '',
       },
       size: {

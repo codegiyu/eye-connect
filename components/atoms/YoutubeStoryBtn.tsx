@@ -10,7 +10,7 @@ export const YoutubeStoryBtn = ({ className }: { className?: string }) => {
       rel="noreferrer noopener">
       <div className="w-fit flex items-center gap-5">
         <p className="typo-body2 text-white hidden sm:block">Watch Our Story</p>
-        <div className="w-[3.75rem] aspect-square border-2 border-white rounded-full relative">
+        <div className="w-[3.75rem] aspect-square bg-story border-2 border-white rounded-full relative">
           <div
             className="w-[1.375rem] aspect-square bg-primary rounded-full grid place-items-center absolute 
             top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 text-[0.375rem] text-dark-secondary">

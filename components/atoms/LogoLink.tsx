@@ -1,4 +1,4 @@
-import { ZenliftLogoStar } from '../icons';
+import { EyeLogo } from '../icons';
 import { ZenButton } from './ZenButton';
 
 export interface LogoLinkProps {
@@ -12,11 +12,11 @@ export const LogoLink = ({ size = 'default', inLightBg }: LogoLinkProps) => {
       <div className="w-fit flex items-center gap-3 sm:gap-5">
         <i
           className={`text-[2.25rem] ${size === 'default' ? 'sm:text-[2.5rem]' : 'sm:text-[3rem]'} ${inLightBg ? 'text-primary-dark' : 'text-primary'}`}>
-          <ZenliftLogoStar />
+          <EyeLogo />
         </i>
         <h2
-          className={`font-marcel text-[1.75rem] ${size === 'default' ? 'sm:text-[2.25rem]' : 'sm:text-[2.5rem]'} leading-none tracking-[0.12em] ${inLightBg ? 'text-dark-primary' : 'text-white'} uppercase`}>
-          Zenlift
+          className={`text-[1.75rem] ${size === 'default' ? 'sm:text-[2.25rem]' : 'sm:text-[2.5rem]'} leading-none -tracking-[0.02em] ${inLightBg ? 'text-dark-primary' : 'text-white'}`}>
+          EyeConnect
         </h2>
       </div>
     </ZenButton>

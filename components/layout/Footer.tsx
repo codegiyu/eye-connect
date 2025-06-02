@@ -25,14 +25,14 @@ const Footer = ({ className, ...props }: FooterProps) => {
             </div>
           </div>
 
-          {footerLinks.map((item, idx) => (
+          {/* {footerLinks.map((item, idx) => (
             <FooterLinksGroup key={idx} {...item} />
-          ))}
+          ))} */}
         </div>
 
-        <div className="w-full flex items-center justify-center sm:justify-between border-t border-primary-light pt-6">
+        <div className="w-full flex items-center justify-center sm:justify-between border-t border-dark-primary/20 pt-6">
           <div className="typo-body3 text-dark-secondary flex flex-col sm:flex-row items-center gap-2 sm:gap-5">
-            <p className="">Copyright &copy;{new Date().getFullYear()} Zenlift</p>
+            <p className="">Copyright &copy;{new Date().getFullYear()} EyeConnect</p>
             <p className="hidden sm:block">|</p>
             <p className="">
               Built by{' '}
@@ -86,7 +86,7 @@ interface FooterLinksGroupProps {
   links: FooterLink[];
 }
 
-const footerLinks: FooterLinksGroupProps[] = [
+export const footerLinks: FooterLinksGroupProps[] = [
   {
     groupName: 'Company',
     links: [
@@ -98,7 +98,7 @@ const footerLinks: FooterLinksGroupProps[] = [
   },
 ];
 
-const FooterLinksGroup = ({ groupName, links }: FooterLinksGroupProps) => {
+export const FooterLinksGroup = ({ groupName, links }: FooterLinksGroupProps) => {
   return (
     <div className="w-fit grid gap-5 sm:px-5">
       <h3 className="typo-h6 text-dark-primary">{groupName}</h3>

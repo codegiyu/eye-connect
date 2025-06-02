@@ -18,7 +18,7 @@ const Header = ({ className, ...props }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <section className="w-full min-h-[25rem] bg-gray-text">
+    <section className="w-full min-h-[25rem] bg-hero">
       <header
         className={cn(
           'w-full zen-container bg-gradient-to-b from-[#00000080] to-[#00000000]',
@@ -100,17 +100,20 @@ const Header = ({ className, ...props }: HeaderProps) => {
         </section>
       </header>
 
-      <section className="hero zen-container pt-[4.375rem] pb-[7.5rem] relative">
+      <section className="hero zen-container pt-[5rem] pb-[7.5rem] relative">
         <div className="w-full extra-padding-container grid gap-10 lg:flex justify-center lg:justify-between text-white relative z-[2]">
           <div className="w-full max-w-[31.875rem] h-fit grid justify-self-center ">
             <div className="w-full grid gap-6">
-              <div className="w-full grid">
-                <p className="typo-subtitle uppercase">Zenlift - Mental Health</p>
-                <h1 className="typo-h1">Your Path to Mental Wellness Starts Here</h1>
+              <div className="w-full grid gap-2">
+                <p className="typo-subtitle uppercase">EyeConnect Initiative</p>
+                <h1 className="typo-h1">Bridging The Eye Care Gap</h1>
               </div>
               <p className="w-full typo-body2 text-light-gray-1 pt-5 border-t border-light-gray">
-                Odio cras proin proin sit quis fringilla aliquet. Consectetur elementum viverra
-                egestas egestas nulla ullamcorper varius quam.
+                Bringing accessible, affordable, and sustainable eye care to underserved communities
+                through AI-powered telemedicine, community-led outreach, and recycled eyewear
+                solutions.
+                {/* At EyeConnect, we combine innovation and empathy to restore vision,
+                improve lives, and empower local change. */}
               </p>
               <div className="w-full flex items-center justify-between">
                 <ZenButton text="Learn More" textClassName="uppercase" />
@@ -125,20 +128,20 @@ const Header = ({ className, ...props }: HeaderProps) => {
             </div>
 
             <div className="w-full h-fit max-w-[19.75rem] bg-white rounded-xl overflow-hidden ml-auto">
-              <div className="w-full aspect-[1.37] bg-dark-primary"></div>
+              <div className="w-full aspect-[1.37] bg-outreach"></div>
               <div className="w-full grid gap-4 p-6">
                 <div className="w-full flex items-center justify-between">
                   <h6 className="typo-body1 text-dark-primary">Core Services</h6>
-                  <i className="text-primary-dark text-xl">
+                  <i className="text-primary text-xl">
                     <ZenliftStar />
                   </i>
                 </div>
                 <div className="w-full grid gap-3">
                   <p className="w-full bg-primary-light typo-body3 text-dark-secondary pt-2 pb-2.5 px-[1.875rem] rounded-full">
-                    Therapy Sessions
+                    Tele-Eye care & AI Diagnostics
                   </p>
                   <p className="w-full bg-primary-light typo-body3 text-dark-secondary pt-2 pb-2.5 px-[1.875rem] rounded-full">
-                    Psychiatric Consultations
+                    Community outreach
                   </p>
                 </div>
               </div>

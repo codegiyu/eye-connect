@@ -11,16 +11,16 @@ export const AboutUs = () => {
             <div className="w-full h-fit grid sm:grid-cols-[14.5rem_1fr] lg:grid-cols-1 xl:grid-cols-[14.5rem_1fr] gap-10 items-center rounded-2xl border border-border">
               <div className="w-full h-full min-h-[16.875rem] flex-none bg-gray-text rounded-2xl overflow-hidden"></div>
               <div className="w-full grid gap-4 px-5 sm:px-0 lg:px-5 xl:px-0 sm:pr-10 xl:pr-10 pb-5 pt-0 sm:pt-5 lg:pt-0 xl:pt-5">
-                <h3 className="typo-h6 text-dark-primary">Welcome Message from Our CEO</h3>
+                <h3 className="typo-h6 text-dark-primary">Our Cofounders&apos; Vision</h3>
                 <p className="typo-body3 text-gray-text">
-                  Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh
-                  ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac
-                  ultricies sem nulla.
+                  To create a world where no one suffers from preventable blindness, regardless of
+                  their location, income, or background — by making eye care universally accessible,
+                  culturally sensitive, and environmentally sustainable.
                 </p>
-                <div className="w-full grid gap-1">
+                {/* <div className="w-full grid gap-1">
                   <p className="typo-body2 text-dark-primary">Joseph Doolenan</p>
                   <p className="typo-body3 text-primary-dark">CEO, Zenlift</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

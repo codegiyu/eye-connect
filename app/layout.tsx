@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Zenlift',
+  title: 'EyeConnect Initiative',
   description:
-    'Your path to mental wellness starts here. Odio cras proin proin sit quis fringilla aliquet. Consectetur elementum viverra egestas egestas nulla ullamcorper varius quam.',
+    'Bringing accessible, affordable, and sustainable eye care to underserved communities\
+    through AI-powered telemedicine, community-led outreach, and recycled eyewear\
+    solutions.',
   robots: 'index, follow, max-image-preview:large',
   authors: [
     {
@@ -14,20 +16,24 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    url: 'https://zenlift.com',
-    siteName: 'Zenlift',
-    title: 'Zenlift - Your path to mental wellness starts here',
+    url: 'https://www.eyeconnectglobal.com',
+    siteName: 'EyeConnect Initiative',
+    title: 'EyeConnect Initiative - Bridging The Eye Care Gap',
     description:
-      'Your path to mental wellness starts here. Odio cras proin proin sit quis fringilla aliquet. Consectetur elementum viverra egestas egestas nulla ullamcorper varius quam.',
-    images: [{ url: 'https://i.postimg.cc/0NgQhN4V/Screenshot-2025-03-24-020528.png' }],
+      'Bringing accessible, affordable, and sustainable eye care to underserved communities\
+      through AI-powered telemedicine, community-led outreach, and recycled eyewear\
+      solutions.',
+    images: [{ url: 'https://i.postimg.cc/TYYthV3v/Screenshot-2025-06-02-042103.png' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zenlift - Your path to mental wellness starts here',
+    title: 'EyeConnect Initiative - Bridging The Eye Care Gap',
     description:
-      'Your path to mental wellness starts here. Odio cras proin proin sit quis fringilla aliquet. Consectetur elementum viverra egestas egestas nulla ullamcorper varius quam.',
+      'Bringing accessible, affordable, and sustainable eye care to underserved communities\
+      through AI-powered telemedicine, community-led outreach, and recycled eyewear\
+      solutions.',
     creator: '@TheLonerider20',
-    images: ['https://i.postimg.cc/0NgQhN4V/Screenshot-2025-03-24-020528.png'],
+    images: ['https://i.postimg.cc/TYYthV3v/Screenshot-2025-06-02-042103.png'],
   },
 };
 
@@ -42,7 +48,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="canonical" href="https://zenlift.com" />
+        <link rel="canonical" href="https://www.eyeconnectglobal.com" />
       </head>
       <body className={`w-full min-h-screen grid grid-rows-[auto_1fr_auto] antialiased`}>
         {children}
