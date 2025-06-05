@@ -7,7 +7,7 @@ export const OurServices = () => {
     <section id="services" className="zen-container bg-variant-bg py-[7.5rem]">
       <div className="w-full grid gap-10 lg:gap-16 extra-padding-container">
         <div className="w-full flex items-center justify-between gap-5">
-          <SectionHeading title="Holistic Mental Health Solutions" subtitle="Our Services" />
+          <SectionHeading title="Innovative Eye Care for All" subtitle="Our Services" />
           {/* <ZenButton variant="secondary" text="All Services" wrapClassName="hidden lg:block" /> */}
         </div>
 

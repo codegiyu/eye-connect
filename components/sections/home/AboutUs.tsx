@@ -6,7 +6,7 @@ export const AboutUs = () => {
     <section id="about-us" className="zen-container py-[7.5rem]">
       <div className="w-full extra-padding-container">
         <div className="w-full grid lg:grid-cols-2 items-stretch justify-between gap-10">
-          <div className="w-full xl:max-w-[38.9375rem] h-full flex flex-col justify-between gap-10">
+          <div className="w-full xl:max-w-[40rem] h-full flex flex-col justify-between gap-10">
             <SectionHeading subtitle="About Us" title="Transforming lives through care" />
             <div className="w-full h-fit grid sm:grid-cols-[14.5rem_1fr] lg:grid-cols-1 xl:grid-cols-[14.5rem_1fr] gap-10 items-center rounded-2xl border border-border">
               <div className="w-full h-full min-h-[16.875rem] flex-none bg-cofounders rounded-2xl overflow-hidden"></div>
@@ -14,14 +14,14 @@ export const AboutUs = () => {
                 <h3 className="typo-h6 text-dark-primary">Our Cofounders&apos; Vision</h3>
                 <p className="typo-body3 text-gray-text">
                   To create a world where no one suffers from preventable blindness, regardless of
-                  their location, income, or background — by making eye care universally accessible,
+                  their location, income, or background, by making eye care universally accessible,
                   culturally sensitive, and environmentally sustainable.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="w-full xl:max-w-[28.9375rem] h-fit justify-self-end grid gap-10">
+          <div className="w-full xl:max-w-[45rem] h-fit justify-self-end grid gap-10">
             <div className="w-full bg-variant-bg py-5 px-5 sm:px-10 lg:px-5 1440:px-10 rounded-2xl">
               <h3 className="typo-h5 text-dark-primary">Our Mission</h3>
             </div>
@@ -69,6 +69,6 @@ const missionStatements: MissionStatementProps[] = [
   },
   {
     title: 'Promoting Sustainability Through Innovation',
-    text: 'We tackle healthcare and environmental challenges together. By upcycling plastic waste into affordable eyeglass frames, we reduce pollution, create jobs, and make vision care more accessible — redefining what sustainable impact looks like.',
+    text: 'We tackle healthcare and environmental challenges together. By upcycling plastic waste into affordable eyeglass frames, we reduce pollution, create jobs, and make vision care more accessible, redefining what sustainable impact looks like.',
   },
 ];
