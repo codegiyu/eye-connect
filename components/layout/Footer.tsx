@@ -25,9 +25,9 @@ const Footer = ({ className, ...props }: FooterProps) => {
             </div>
           </div>
 
-          {/* {footerLinks.map((item, idx) => (
+          {footerLinks.map((item, idx) => (
             <FooterLinksGroup key={idx} {...item} />
-          ))} */}
+          ))}
         </div>
 
         <div className="w-full flex items-center justify-center sm:justify-between border-t border-dark-primary/20 pt-6">
@@ -68,7 +68,7 @@ const SocialMediaLink = ({ Icon, link }: SocialMediaLinkProps) => {
     <ZenButton
       variant="ghost"
       size="icon"
-      className="w-8 h-8 bg-primary-dark grid place-items-center rounded-full"
+      className="w-8 h-8 bg-primary-dark grid place-items-center rounded-full hover:scale-105 transition-all duration-300 ease-in-out"
       href={link}>
       <i className="text-white text-[0.875rem]">
         <Icon />
@@ -93,14 +93,14 @@ export const footerLinks: FooterLinksGroupProps[] = [
       { text: 'Home', link: '/' },
       { text: 'About Us', link: '/#about-us' },
       { text: 'Services', link: '/#services' },
-      { text: 'Learn More', link: '/#learn-more' },
+      // { text: 'Learn More', link: '/#learn-more' },
     ],
   },
 ];
 
 export const FooterLinksGroup = ({ groupName, links }: FooterLinksGroupProps) => {
   return (
-    <div className="w-fit grid gap-5 sm:px-5">
+    <div className="w-fit h-fit grid gap-2.5 sm:gap-5 sm:px-5">
       <h3 className="typo-h6 text-dark-primary">{groupName}</h3>
       <nav className="w-fit grid gap-2.5">
         {links.map(({ text, link }, idx) => (
@@ -109,7 +109,7 @@ export const FooterLinksGroup = ({ groupName, links }: FooterLinksGroupProps) =>
             variant="ghost"
             size="icon"
             className=""
-            textClassName="typo-body2 text-gray-text"
+            textClassName="typo-body2 text-dark-secondary capitalize hover:text-dark-secondary/80"
             text={text}
             href={link}
           />

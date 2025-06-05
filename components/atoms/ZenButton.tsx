@@ -104,7 +104,7 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
               </i>
             )}
             <div className="flex items-center gap-3">
-              <span className={cn('font-marcel uppercase', textClassName)}>{text}</span>
+              <span className={cn('font-marcel', textClassName)}>{text}</span>
               {loading && (
                 <i className={cn('typo-body1 text-green animate-spin', loadingIconClassName)}>
                   <LoadingLine />

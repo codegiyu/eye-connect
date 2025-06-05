@@ -104,7 +104,7 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply text-[16px];
+    @apply text-[16px] scroll-smooth;
   }
   body {
     @apply bg-white text-gray-text leading-[1.4];
@@ -177,6 +177,21 @@
     background: linear-gradient(90deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../public/images/story.png');
     background-size: cover;
     background-position: center center;
+  }
+  .bg-cofounders {
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/cofounders.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+  .bg-daniel {
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/daniel.jpg');
+    background-size: cover;
+    background-position: top center;
+  }
+  .bg-clinton {
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/clinton.jpg');
+    background-size: cover;
+    background-position: top center;
   }
 }
 

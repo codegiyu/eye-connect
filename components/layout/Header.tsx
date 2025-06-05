@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils';
 import { useState, type ComponentProps } from 'react';
 import { ZenButton } from '../atoms/ZenButton';
-import { HeroBlur, Menu, ZenliftStar } from '../icons';
+import { HeroBlur, Menu, EyeLogo } from '../icons';
 import { ContactButton } from '../atoms/ContactButton';
 import { YoutubeStoryBtn } from '../atoms/YoutubeStoryBtn';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '../ui/sheet';
@@ -116,7 +116,12 @@ const Header = ({ className, ...props }: HeaderProps) => {
                 improve lives, and empower local change. */}
               </p>
               <div className="w-full flex items-center justify-between">
-                <ZenButton text="Learn More" textClassName="uppercase" />
+                <ZenButton
+                  text="Learn More"
+                  onClick={() =>
+                    window.open('https://youtu.be/f-1VlUNHowg?si=QygFlUMB1z8ibGme', '_blank')
+                  }
+                />
                 <YoutubeStoryBtn className="lg:hidden" />
               </div>
             </div>
@@ -133,14 +138,14 @@ const Header = ({ className, ...props }: HeaderProps) => {
                 <div className="w-full flex items-center justify-between">
                   <h6 className="typo-body1 text-dark-primary">Core Services</h6>
                   <i className="text-primary text-xl">
-                    <ZenliftStar />
+                    <EyeLogo />
                   </i>
                 </div>
                 <div className="w-full grid gap-3">
-                  <p className="w-full bg-primary-light typo-body3 text-dark-secondary pt-2 pb-2.5 px-[1.875rem] rounded-full">
+                  <p className="w-full bg-variant-bg typo-body3 text-dark-secondary pt-2 pb-2.5 px-[1.875rem] rounded-full">
                     Tele-Eye care & AI Diagnostics
                   </p>
-                  <p className="w-full bg-primary-light typo-body3 text-dark-secondary pt-2 pb-2.5 px-[1.875rem] rounded-full">
+                  <p className="w-full bg-variant-bg typo-body3 text-dark-secondary pt-2 pb-2.5 px-[1.875rem] rounded-full">
                     Community outreach
                   </p>
                 </div>
@@ -176,7 +181,7 @@ const HeaderLink = ({ text, link, inLightBg, afterClick }: HeaderLinkProps) => {
         variant="ghost"
         size="icon"
         className={`${inLightBg ? '' : 'hover:underline'} hover:underline-offset-4 decoration-2 decoration-primary`}
-        textClassName={`typo-button ${inLightBg ? 'text-dark-primary hover:text-primary-dark' : 'text-white'}`}
+        textClassName={`typo-button capitalize ${inLightBg ? 'text-dark-primary hover:text-primary-dark' : 'text-white'}`}
         text={text}
         href={link}
         onClick={() => {

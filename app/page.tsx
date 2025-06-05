@@ -1,7 +1,8 @@
 import { MainLayout } from '@/components/layout/MainLayout';
 import { AboutUs } from '@/components/sections/home/AboutUs';
-import { ConditionsWeTreat } from '@/components/sections/home/ConditionsWeTreat';
-import { CTA } from '@/components/sections/home/CTA';
+import { OurCofounders } from '@/components/sections/home/Cofounders';
+// import { ConditionsWeTreat } from '@/components/sections/home/ConditionsWeTreat';
+// import { CTA } from '@/components/sections/home/CTA';
 import { OurServices } from '@/components/sections/home/Services';
 
 export default function Home() {
@@ -9,9 +10,10 @@ export default function Home() {
     <MainLayout>
       <section className="w-full">
         <AboutUs />
-        <ConditionsWeTreat />
+        {/* <ConditionsWeTreat /> */}
         <OurServices />
-        <CTA />
+        <OurCofounders />
+        {/* <CTA /> */}
       </section>
     </MainLayout>
   );
