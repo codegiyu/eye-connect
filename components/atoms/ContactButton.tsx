@@ -12,8 +12,8 @@ export interface ContactButtonProps {
 }
 
 const contactLinks: Record<ContactBtnType, string> = {
-  mail: 'mailto:codegiyu@gmail.com',
-  phone: 'tel:+2348140629487',
+  mail: 'mailto:eyeconnect2025@gmail.com',
+  phone: 'tel:+2349019038302',
 };
 const contactIcons: Record<ContactBtnType, IconComp> = {
   mail: Mail,

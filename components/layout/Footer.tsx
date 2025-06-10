@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 import type { ComponentProps, SVGProps, JSX } from 'react';
 import { ZenButton } from '../atoms/ZenButton';
-import { Facebook, Instagram, Linkedin, Twitter } from '../icons';
+// import { Facebook, Instagram, Linkedin, Twitter } from '../icons';
 import { LogoLink } from '../atoms/LogoLink';
 
 export { Footer, type FooterProps };
@@ -57,10 +57,10 @@ interface SocialMediaLinkProps {
 }
 
 const socialMediaLinks: SocialMediaLinkProps[] = [
-  { Icon: Facebook, link: 'https://www.facebook.com' },
-  { Icon: Twitter, link: 'https://www.x.com' },
-  { Icon: Linkedin, link: 'https://www.linkedin.com' },
-  { Icon: Instagram, link: 'https://www.instagram.com' },
+  // { Icon: Facebook, link: 'https://www.facebook.com' },
+  // { Icon: Twitter, link: 'https://www.x.com' },
+  // { Icon: Linkedin, link: 'https://www.linkedin.com' },
+  // { Icon: Instagram, link: 'https://www.instagram.com' },
 ];
 
 const SocialMediaLink = ({ Icon, link }: SocialMediaLinkProps) => {
@@ -88,11 +88,13 @@ interface FooterLinksGroupProps {
 
 export const footerLinks: FooterLinksGroupProps[] = [
   {
-    groupName: 'Company',
+    groupName: 'Quick Links',
     links: [
       { text: 'Home', link: '/' },
       { text: 'About Us', link: '/#about-us' },
       { text: 'Services', link: '/#services' },
+      { text: 'Cofounders', link: '/#cofounders' },
+      { text: 'Gallery', link: '/#gallery' },
       // { text: 'Learn More', link: '/#learn-more' },
     ],
   },

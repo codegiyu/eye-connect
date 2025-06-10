@@ -193,6 +193,95 @@
     background-size: cover;
     background-position: top center;
   }
+
+  /* Gallery Images */
+  .bg-gallery-1 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-1.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-2 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-2.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-3 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-3.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-4 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-4.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+    /* aspect-ratio: 0.667; */
+  }
+  .bg-gallery-5 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-5.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-6 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-6.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-7 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-7.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-8 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-8.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-9 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-9.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-10 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-10.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-11 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-11.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-12 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-12.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+  }
+  .bg-gallery-13 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-13.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+    /* aspect-ratio: 1.33; */
+  }
+  .bg-gallery-14 {
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-14.jpg');
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1.5;
+    /* aspect-ratio: 1.33; */
+  }
 }
 
 /* .dark {
