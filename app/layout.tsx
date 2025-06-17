@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     'Bringing accessible, affordable, and sustainable eye care to underserved communities\
     through AI-powered telemedicine, community-led outreach, and recycled eyewear\
     solutions.',
+  keywords: ['eye', 'eyeconnect', 'eye-connect', 'eye connect', 'telemedicine', 'eye care'],
   robots: 'index, follow, max-image-preview:large',
   authors: [
     {

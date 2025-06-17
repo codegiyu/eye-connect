@@ -124,7 +124,12 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
     return (
       <>
         {href && !disabled ? (
-          <Link href={href} onClick={() => props.onClick?.()} className={fullWrapClassName}>
+          <Link
+            href={href}
+            target="_blank"
+            rel="noreferrer noopener"
+            onClick={() => props.onClick?.()}
+            className={fullWrapClassName}>
             {mainEl}
           </Link>
         ) : (

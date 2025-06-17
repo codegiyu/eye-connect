@@ -4,7 +4,7 @@ import { EyeLogo } from '@/components/icons';
 
 export const OurServices = () => {
   return (
-    <section id="services" className="zen-container bg-variant-bg py-[7.5rem]">
+    <section id="services" className="zen-container bg-variant-bg/80 py-[7.5rem]">
       <div className="w-full grid gap-10 lg:gap-16 extra-padding-container">
         <div className="w-full flex items-center justify-between gap-5">
           <SectionHeading title="Innovative Eye Care for All" subtitle="Our Services" />

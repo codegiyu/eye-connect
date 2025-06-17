@@ -84,6 +84,7 @@
   --breakpoint-xl: 1280px;
   --breakpoint-1440: 1440px;
   --breakpoint-2xl: 1536px;
+
   --color-primary: #0AB1FF;
   --color-primary-dark: #00628F;
   --color-primary-light: #47C5FF;
@@ -95,6 +96,8 @@
   --color-gray-text: #707070;
   --color-gray-border: #E2E2E2;
   --color-variant-bg: #D6F2FF;
+  --color-youtube-red: #FF0000;
+
   --font-manrope: 'Manrope', sans-serif;
   --font-marcel: 'Marcellus', serif;
 }
@@ -192,6 +195,16 @@
     background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/clinton.jpg');
     background-size: cover;
     background-position: top center;
+  }
+  .bg-interview {
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/interview.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+  .bg-beneficiaries {
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/beneficiaries.jpg');
+    background-size: cover;
+    background-position: bottom center;
   }
 
   /* Gallery Images */
