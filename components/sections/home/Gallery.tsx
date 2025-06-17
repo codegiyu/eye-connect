@@ -31,7 +31,7 @@ export const Gallery = () => {
             centeredSlides={true}
             navigation={true}
             mousewheel={true}
-            autoplay={{ delay: 4000, disableOnInteraction: true }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
             slidesPerView={'auto'}
             spaceBetween={4}
             className="mySwiper w-full h-auto flex items-center justify-center flex-nowrap">
