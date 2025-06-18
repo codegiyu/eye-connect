@@ -39,7 +39,7 @@ const Service = ({ text, title }: ServiceProps) => {
         </i>
       </div>
 
-      <h4 className="typo-h5 text-dark-primary group-hover:text-white mb-3 sm:mb-3.5">{title}</h4>
+      <h5 className="typo-h5 text-dark-primary group-hover:text-white mb-3 sm:mb-3.5">{title}</h5>
       <p className="typo-body3 text-gray-text group-hover:text-white/75">{text}</p>
     </div>
   );
@@ -52,22 +52,10 @@ const services: ServiceProps[] = [
   },
   {
     title: 'Community Screenings & Awareness',
-    text: 'We organize free visual screenings and outreach programs tailored to each community’s language and culture. By training local volunteers, we raise awareness and build trust around eye health.',
+    text: "We organize free visual screenings and outreach programs tailored to each community's language and culture. By training local volunteers, we raise awareness and build trust around eye health.",
   },
   {
     title: 'Sustainable Eyewear Solutions',
     text: 'We turn plastic waste into low-cost, high-quality eyeglass frames — creating jobs, reducing pollution, and delivering vital vision tools to those who need them most.',
   },
-  // {
-  //   title: 'Couples Counseling',
-  //   text: 'Id nisl lacus penatibus bibendum vitae lectus et a. Lorem nulla nulla nulla faucibus amet feugiat ultricies. Posuere arcu enim.',
-  // },
-  // {
-  //   title: 'Meditation Workshops',
-  //   text: 'Id nisl lacus penatibus bibendum vitae lectus et a. Lorem nulla nulla nulla faucibus amet feugiat ultricies. Posuere arcu enim.',
-  // },
-  // {
-  //   title: 'Teletherapy Services',
-  //   text: 'Id nisl lacus penatibus bibendum vitae lectus et a. Lorem nulla nulla nulla faucibus amet feugiat ultricies. Posuere arcu enim.',
-  // },
 ];

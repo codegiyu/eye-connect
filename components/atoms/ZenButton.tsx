@@ -6,6 +6,7 @@ import {
   type ComponentProps,
   type JSX,
   MouseEvent,
+  ComponentPropsWithoutRef,
 } from 'react';
 import { buttonVariants } from '../ui/button';
 import { type VariantProps } from 'class-variance-authority';
@@ -32,7 +33,10 @@ export interface ZenButtonProps
   onDisabledClick?: () => void;
   onClick?: (e?: MouseEvent<HTMLButtonElement>) => void;
   wrapClassName?: string;
-  href?: string;
+  linkProps?: Omit<ComponentPropsWithoutRef<'a'>, 'onClick' | 'className' | 'children' | 'href'> & {
+    href: string;
+    preventdefault?: string;
+  };
 }
 
 const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
@@ -56,14 +60,14 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
       onDisabledClick,
       disabled = false,
       wrapClassName = '',
-      href,
+      linkProps,
       ...props
     },
     ref
   ) => {
     const fullWrapClassName = cn(
-      `inline-block ${!!onDisabledClick && disabled ? 'cursor-pointer focus-visible:outline-gray-border focus-visible:outline-1' : 'cursor-default'} focus:outline-none focus-visible:outline-white/60 focus-visible:outline-2 outline-offset-2`,
-      size === 'full' ? 'w-full' : '',
+      `inline-block leading-none ${!!onDisabledClick && disabled ? 'cursor-pointer focus-visible:outline-gray-border focus-visible:outline-1' : 'cursor-default'} focus:outline-none focus-visible:outline-white/60 focus-visible:outline-2 outline-offset-2`,
+      size === 'full' ? 'w-full' : 'w-fit',
       wrapClassName
     );
     const wrapProps = {
@@ -123,13 +127,14 @@ const ZenButton = forwardRef<HTMLButtonElement, ZenButtonProps>(
 
     return (
       <>
-        {href && !disabled ? (
+        {linkProps && !disabled ? (
           <Link
-            href={href}
-            target="_blank"
-            rel="noreferrer noopener"
-            onClick={() => props.onClick?.()}
-            className={fullWrapClassName}>
+            onClick={(e: MouseEvent<HTMLAnchorElement>) => {
+              if (linkProps.preventdefault === 'true') e.preventDefault();
+              props.onClick?.();
+            }}
+            className={fullWrapClassName}
+            {...linkProps}>
             {mainEl}
           </Link>
         ) : (

@@ -1,6 +1,6 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { useState, type ComponentProps } from 'react';
+import { useEffect, useRef, useState, type ComponentProps } from 'react';
 import { ZenButton } from '../atoms/ZenButton';
 import { HeroBlur, Menu, EyeLogo } from '../icons';
 import { ContactButton } from '../atoms/ContactButton';
@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '../ui/sheet';
 import { GhostButton } from '../atoms/GhostButton';
 import { LogoLink } from '../atoms/LogoLink';
 import { XIcon } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 export { Header, type HeaderProps };
 
@@ -16,6 +17,7 @@ type HeaderProps = ComponentProps<'header'>;
 
 const Header = ({ className, ...props }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <section className="w-full min-h-[25rem] bg-hero">
@@ -32,7 +34,7 @@ const Header = ({ className, ...props }: HeaderProps) => {
             <nav className="w-fit">
               <ul className="w-fit flex items-center gap-4">
                 {headerLinks.map((item, idx) => (
-                  <HeaderLink key={idx} {...item} />
+                  <HeaderLink key={idx} {...item} inHomePage={pathname === '/'} />
                 ))}
               </ul>
             </nav>
@@ -136,7 +138,7 @@ const Header = ({ className, ...props }: HeaderProps) => {
               <div className="w-full aspect-[1.37] bg-outreach"></div>
               <div className="w-full grid gap-4 p-6">
                 <div className="w-full flex items-center justify-between">
-                  <h6 className="typo-body1 text-dark-primary">Core Services</h6>
+                  <h4 className="typo-body1 text-dark-primary">Core Services</h4>
                   <i className="text-primary text-xl">
                     <EyeLogo />
                   </i>
@@ -163,28 +165,45 @@ const Header = ({ className, ...props }: HeaderProps) => {
 
 interface HeaderLinkProps {
   text: string;
-  link: string;
+  href: string;
   inLightBg?: boolean;
   afterClick?: () => void;
+  inHomePage?: boolean;
 }
 
 const headerLinks: HeaderLinkProps[] = [
-  { text: 'Home', link: '/' },
-  { text: 'About Us', link: '/#about-us' },
-  { text: 'Services', link: '/#services' },
+  { text: 'Home', href: '/' },
+  { text: 'About Us', href: '/#about-us' },
+  { text: 'Services', href: '/#services' },
+  { text: 'Cofounders', href: '/#cofounders' },
+  { text: 'Stories', href: '/#stories' },
+  { text: 'Gallery', href: '/#gallery' },
 ];
 
-const HeaderLink = ({ text, link, inLightBg, afterClick }: HeaderLinkProps) => {
+const HeaderLink = ({ text, href, inLightBg, afterClick, inHomePage }: HeaderLinkProps) => {
+  const [elementExists, setElementExists] = useState(false);
+  const targetElRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const targetDescriptor = inHomePage && href.startsWith('/#') ? href.slice(2) : '';
+    targetElRef.current = document?.getElementById(targetDescriptor);
+    setElementExists(!!targetElRef.current);
+  }, [href, inHomePage]);
+
   return (
-    <li>
+    <li className={`${href === '/' && inHomePage ? 'hidden' : ''}`}>
       <ZenButton
         variant="ghost"
         size="icon"
         className={`${inLightBg ? '' : 'hover:underline'} hover:underline-offset-4 decoration-2 decoration-primary`}
         textClassName={`typo-button capitalize ${inLightBg ? 'text-dark-primary hover:text-primary-dark' : 'text-white'}`}
         text={text}
-        href={link}
+        linkProps={{ href: elementExists ? '#' : href, preventdefault: 'true' }}
         onClick={() => {
+          if (targetElRef.current) {
+            targetElRef.current.scrollIntoView({ behavior: 'smooth' });
+          }
+
           afterClick?.();
         }}
       />

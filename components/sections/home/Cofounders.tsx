@@ -58,7 +58,7 @@ const CofounderDetailsBlock = ({
             variant="ghost"
             size="icon"
             className="w-8 h-8 bg-primary-dark grid place-items-center rounded-full hover:scale-[105%] transition-all duration-300 ease-in-out"
-            href={linkedIn}>
+            linkProps={{ href: linkedIn, target: '_blank', rel: 'noopener noreferrer' }}>
             <i className="text-white text-[0.875rem]">
               <Linkedin />
             </i>

@@ -37,7 +37,10 @@ type StoryProps = {
 const Story = ({ title, imgClass, videoLink }: StoryProps) => {
   return (
     <div className="w-full grid gap-6 lg:gap-[1.875rem]">
-      <GhostButton href={videoLink} className="w-full">
+      <GhostButton
+        linkProps={{ href: videoLink, target: '_blank', rel: 'noopener noreferrer' }}
+        className="w-full"
+        wrapClassName="w-full">
         <div
           className={`group w-full aspect-[1.75] grid place-items-center rounded-2xl relative overflow-hidden`}>
           <div
@@ -48,10 +51,10 @@ const Story = ({ title, imgClass, videoLink }: StoryProps) => {
         </div>
       </GhostButton>
 
-      <GhostButton href={videoLink}>
+      <GhostButton linkProps={{ href: videoLink, target: '_blank', rel: 'noopener noreferrer' }}>
         <div className="w-fit flex items-center gap-4">
           <PlayCircle className="w-[2.75rem] md:w-[3.625rem] bg-primary/80 text-base text-dark-secondary" />
-          <h4 className="typo-h6 text-dark-secondary">{title}</h4>
+          <h6 className="typo-h6 text-dark-secondary">{title}</h6>
         </div>
       </GhostButton>
     </div>

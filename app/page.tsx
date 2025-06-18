@@ -1,3 +1,4 @@
+import { ScrollToTop } from '@/components/general/ScrollToTop';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { AboutUs } from '@/components/sections/home/AboutUs';
 import { OurCofounders } from '@/components/sections/home/Cofounders';
@@ -13,6 +14,7 @@ export default function Home() {
       <OurCofounders />
       <Stories />
       <Gallery />
+      <ScrollToTop />
     </MainLayout>
   );
 }

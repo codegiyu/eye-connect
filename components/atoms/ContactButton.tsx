@@ -30,7 +30,7 @@ export const ContactButton = ({ type, inWhiteBg, onClick }: ContactButtonProps) 
       size="icon"
       className={`w-[3.75rem] aspect-square ${typeClassName} grid place-items-center rounded-full border ${inWhiteBg ? 'border-dark-secondary' : 'border-white'}`}
       onClick={onClick}
-      href={contactLinks[type]}>
+      linkProps={{ href: contactLinks[type] }}>
       <i className={`text-2xl ${inWhiteBg ? 'text-dark-secondary' : 'text-white'}`}>
         <Icon />
       </i>
