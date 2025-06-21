@@ -39,12 +39,12 @@ export const ScrollToTop = ({
   return (
     <ZenButton
       className={cn(
-        'w-12 md:w-16 aspect-[0.9] bg-primary-dark rounded-[10px] grid place-items-center \
+        'w-8 md:w-16 aspect-[0.9] bg-primary-dark rounded-[10px] grid place-items-center \
         transition-all duration-500 ease-out',
         className
       )}
       wrapClassName={cn(
-        'group fixed bottom-10 right-5 md:right-10 transition-all duration-500 ease-out',
+        'group fixed bottom-10 right-5 md:right-10 z-[20] transition-all duration-500 ease-out',
         `${isVisible ? 'scale-100 hover:scale-105' : 'scale-0'}`,
         wrapClassName
       )}

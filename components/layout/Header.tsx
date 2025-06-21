@@ -76,6 +76,7 @@ const Header = ({ className, solidBackground, ...props }: HeaderProps) => {
                       <HeaderLink
                         key={idx}
                         {...item}
+                        inHomePage={pathname === '/'}
                         afterClick={() => setMenuOpen(false)}
                         inLightBg
                       />
@@ -124,6 +125,7 @@ const HeaderLink = ({ text, href, inLightBg, afterClick, inHomePage }: HeaderLin
   useEffect(() => {
     const targetDescriptor = inHomePage && href.startsWith('/#') ? href.slice(2) : '';
     targetElRef.current = document?.getElementById(targetDescriptor);
+
     setElementExists(!!targetElRef.current);
   }, [href, inHomePage]);
 
@@ -137,9 +139,11 @@ const HeaderLink = ({ text, href, inLightBg, afterClick, inHomePage }: HeaderLin
         text={text}
         linkProps={{ href: elementExists ? '#' : href, preventdefault: 'true' }}
         onClick={() => {
-          if (targetElRef.current) {
-            targetElRef.current.scrollIntoView({ behavior: 'smooth' });
-          }
+          setTimeout(() => {
+            if (targetElRef.current) {
+              targetElRef.current.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 500);
 
           afterClick?.();
         }}

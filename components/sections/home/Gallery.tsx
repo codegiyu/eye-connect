@@ -48,22 +48,17 @@ export const Gallery = () => {
             speed={1200}
             onSlideChange={swiper => setActiveIndex(swiper.realIndex || 0)}
             className="mySwiper w-full h-auto flex items-center justify-center flex-nowrap">
-            {galleryImages.map((className, idx) => {
-              if (activeIndex === idx) {
-                console.log({ activeIndex, idx, yes: activeIndex === idx });
-              }
-              return (
-                <SwiperSlide
-                  key={idx}
-                  className={`w-full max-w-[80%] lg:max-w-[60%] aspect-[1.5] flex items-center transition-all duration-500 ease-in-out relative`}>
+            {galleryImages.map((className, idx) => (
+              <SwiperSlide
+                key={idx}
+                className={`w-full max-w-[80%] lg:max-w-[60%] aspect-[1.5] flex items-center transition-all duration-500 ease-in-out relative`}>
+                <div
+                  className={`w-full ${activeIndex === idx ? 'h-full' : 'h-[80%] flex items-center'} rounded-[10px] absolute top-1/2 left-0 -translate-y-1/2 overflow-hidden`}>
                   <div
-                    className={`w-full ${activeIndex === idx ? 'h-full' : 'h-[80%] flex items-center'} rounded-[10px] absolute top-1/2 left-0 -translate-y-1/2 overflow-hidden`}>
-                    <div
-                      className={`w-[120%] aspect-1.5 ${className} object-cover ${activeIndex === idx ? 'animate-[gallery-image_4s_ease-in-out_forwards]' : ''}`}></div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
+                    className={`w-[120%] aspect-1.5 ${className} object-cover ${activeIndex === idx ? 'animate-[gallery-image_4s_ease-in-out_forwards]' : ''}`}></div>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
