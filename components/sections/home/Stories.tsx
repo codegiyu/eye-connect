@@ -1,8 +1,11 @@
-// import { ZenButton } from '@/components/atoms/ZenButton';
+'use client';
+
 import { GhostButton } from '@/components/atoms/GhostButton';
 import { ColouredRings } from '@/components/general/ColouredRings';
 import { PlayCircle } from '@/components/general/PlayCircle';
 import { SectionHeading } from '@/components/general/SectionHeading';
+import { useYoutubeStore } from '@/lib/store/useYoutubeStore';
+// import { YoutubeVidDisplay } from '@/components/general/YoutubeVidDisplay';
 
 export const Stories = () => {
   return (
@@ -32,13 +35,16 @@ type StoryProps = {
   // text: string;
   imgClass: string;
   videoLink: string;
+  embedUrl: string;
 };
 
-const Story = ({ title, imgClass, videoLink }: StoryProps) => {
+const Story = ({ title, imgClass, embedUrl }: StoryProps) => {
+  const { setVideoDetails } = useYoutubeStore(state => state.actions);
+
   return (
     <div className="w-full grid gap-6 lg:gap-[1.875rem]">
       <GhostButton
-        linkProps={{ href: videoLink, target: '_blank', rel: 'noopener noreferrer' }}
+        onClick={() => setVideoDetails({ embedUrl, title })}
         className="w-full"
         wrapClassName="w-full">
         <div
@@ -51,7 +57,9 @@ const Story = ({ title, imgClass, videoLink }: StoryProps) => {
         </div>
       </GhostButton>
 
-      <GhostButton linkProps={{ href: videoLink, target: '_blank', rel: 'noopener noreferrer' }}>
+      <GhostButton
+        onClick={() => setVideoDetails({ embedUrl, title })}
+        className="hover:scale-105 transition-transform duration-500 ease-in-out">
         <div className="w-fit flex items-center gap-4">
           <PlayCircle className="w-[2.75rem] md:w-[3.625rem] bg-primary/80 text-base text-dark-secondary" />
           <h6 className="typo-h6 text-dark-secondary">{title}</h6>
@@ -65,11 +73,13 @@ const stories: StoryProps[] = [
   {
     title: 'EyeConnect Interview',
     videoLink: 'https://youtu.be/dCE-ol4i2Nc',
+    embedUrl: 'https://www.youtube.com/embed/dCE-ol4i2Nc',
     imgClass: 'bg-interview',
   },
   {
     title: 'EyeConnect Beneficiaries',
     videoLink: 'https://youtu.be/3C1x8m0D3I8',
+    embedUrl: 'https://www.youtube.com/embed/3C1x8m0D3I8',
     imgClass: 'bg-beneficiaries',
   },
 ];

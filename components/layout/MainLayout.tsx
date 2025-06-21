@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Footer, type FooterProps } from './Footer';
 import { Header, type HeaderProps } from './Header';
+import { YoutubeVidDisplay } from '../general/YoutubeVidDisplay';
 
 export { MainLayout, type MainLayoutProps, type SeoProps };
 
@@ -14,13 +15,17 @@ interface MainLayoutProps {
   footerProps?: FooterProps;
   children: ReactNode;
   seoProps?: SeoProps;
+  hideHeader?: boolean;
 }
 
-const MainLayout = ({ headerProps, footerProps, children }: MainLayoutProps) => {
+const MainLayout = ({ headerProps, footerProps, hideHeader, children }: MainLayoutProps) => {
   return (
     <>
-      <Header {...headerProps} />
-      <main className="main-content h-full">{children}</main>
+      {!hideHeader && <Header solidBackground {...headerProps} />}
+      <main className="main-content h-full">
+        {children}
+        <YoutubeVidDisplay />
+      </main>
       <Footer {...footerProps} />
     </>
   );

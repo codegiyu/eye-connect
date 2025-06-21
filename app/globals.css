@@ -118,6 +118,10 @@
   .extra-padding-container {
     @apply px-0 xl:px-10 1440:px-14 2xl:px-16;
   }
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply scale-50 md:scale-75 lg:scale-100;
+  }
 
   /* Typography */
   .typo-h1 {
@@ -167,7 +171,7 @@
   }
 
   .bg-hero {
-    background: linear-gradient(90deg, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../public/images/hero-bg-1.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../public/images/hero-bg-1.jpg');
     background-size: cover;
     background-position: center center;
   }
@@ -231,7 +235,6 @@
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
-    /* aspect-ratio: 0.667; */
   }
   .bg-gallery-5 {
     background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-5.jpg');
@@ -286,14 +289,21 @@
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
-    /* aspect-ratio: 1.33; */
   }
   .bg-gallery-14 {
     background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-14.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
-    /* aspect-ratio: 1.33; */
+  }
+}
+
+@keyframes gallery-image {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(102%);
   }
 }
 
