@@ -49,7 +49,7 @@ export const YoutubeVidDisplay = () => {
                 <div className="w-full aspect-video">
                   <iframe
                     className="w-full h-full rounded"
-                    src={`${videoDetails.embedUrl}?autoplay=1&mute=1`}
+                    src={`${videoDetails.embedUrl}?autoplay=1`}
                     title={videoDetails.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
