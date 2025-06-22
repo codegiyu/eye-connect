@@ -9,7 +9,7 @@ import { Stories } from '@/components/sections/home/Stories';
 
 export default function Home() {
   return (
-    <MainLayout hideHeader>
+    <MainLayout>
       <HomeHero />
       <AboutUs />
       <OurServices />

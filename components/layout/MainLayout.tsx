@@ -15,13 +15,14 @@ interface MainLayoutProps {
   footerProps?: FooterProps;
   children: ReactNode;
   seoProps?: SeoProps;
-  hideHeader?: boolean;
 }
 
-const MainLayout = ({ headerProps, footerProps, hideHeader, children }: MainLayoutProps) => {
+const MainLayout = ({ headerProps, footerProps, children }: MainLayoutProps) => {
   return (
     <>
-      {!hideHeader && <Header solidBackground {...headerProps} />}
+      <section>
+        <Header {...headerProps} />
+      </section>
       <main className="main-content h-full">
         {children}
         <YoutubeVidDisplay />

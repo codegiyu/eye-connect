@@ -17,17 +17,30 @@ type HeaderProps = ComponentProps<'header'> & {
 };
 
 const Header = ({ className, solidBackground, ...props }: HeaderProps) => {
+  const [hasSolidBg, setHasSolidBg] = useState(!!solidBackground);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handlePageOffset = () => {
+      const { scrollY } = window;
+      setHasSolidBg(scrollY > 0 ? true : !!solidBackground);
+    };
+
+    handlePageOffset();
+    window.addEventListener('scroll', handlePageOffset);
+
+    return () => window.removeEventListener('scroll', handlePageOffset);
+  }, [solidBackground]);
 
   return (
     <header
       className={cn(
-        `w-full zen-container ${solidBackground ? 'bg-dark-secondary' : 'bg-gradient-to-b from-[#00000080] to-[#00000000]'}`,
+        `w-full zen-container fixed top-0 z-20 ${hasSolidBg ? 'bg-dark-secondary' : 'bg-gradient-to-b from-[#00000080] to-[#00000000]'} transition-colors duration-200 ease-in`,
         className
       )}
       {...props}>
-      <section className="w-full flex items-center justify-between py-5">
+      <section className="w-full flex items-center justify-between py-3 lg:py-5">
         <LogoLink />
 
         <div className="w-fit h-max hidden lg:flex items-center gap-[1.875rem]">

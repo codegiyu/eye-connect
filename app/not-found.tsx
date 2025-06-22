@@ -3,7 +3,9 @@ import { MainLayout } from '@/components/layout/MainLayout';
 
 export default function NotFound() {
   return (
-    <MainLayout footerProps={{ className: 'bg-dark-secondary' }}>
+    <MainLayout
+      headerProps={{ solidBackground: true }}
+      footerProps={{ className: 'bg-dark-secondary' }}>
       <section className="w-full h-full min-h-[60vh] grid place-items-center">
         <div className="w-fit grid gap-5">
           <h1 className="text-6xl font-bold text-dark-primary text-center">404</h1>

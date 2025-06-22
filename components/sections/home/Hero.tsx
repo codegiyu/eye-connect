@@ -3,7 +3,7 @@
 import { YoutubeStoryBtn } from '@/components/atoms/YoutubeStoryBtn';
 import { ZenButton } from '@/components/atoms/ZenButton';
 import { EyeLogo, HeroBlur } from '@/components/icons';
-import { Header } from '@/components/layout/Header';
+// import { Header } from '@/components/layout/Header';
 import { useYoutubeStore, YoutubeVideoDetails } from '@/lib/store/useYoutubeStore';
 
 export const OUR_STORY_DETAILS: YoutubeVideoDetails = {
@@ -15,8 +15,8 @@ export const HomeHero = () => {
   const { setVideoDetails } = useYoutubeStore(state => state.actions);
 
   return (
-    <section className="w-full min-h-[25rem] bg-hero">
-      <Header />
+    <section className="w-full min-h-[25rem] bg-hero pt-[5.625rem] lg:pt-[6.25rem]">
+      {/* <Header /> */}
       <section className="hero zen-container pt-[5rem] pb-[7.5rem] relative">
         <div className="w-full extra-padding-container grid gap-10 lg:flex justify-center lg:justify-between text-white relative z-[2]">
           <div className="w-full max-w-[31.875rem] h-fit grid justify-self-center ">
