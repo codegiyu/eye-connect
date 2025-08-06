@@ -25,20 +25,14 @@ export const PageMetas = ({ title, description }: PageMetasProps) => {
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta
-          property="og:image"
-          content="https://i.postimg.cc/TYYthV3v/Screenshot-2025-06-02-042103.png"
-        />
+        <meta property="og:image" content="https://static.eyeconnectglobal.com/site-image.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.eyeconnectglobal.com" />
         <meta property="og:site_name" content="EyeConnect Initiative - Bridging The Eye Care Gap" />
 
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta
-          name="twitter:image"
-          content="https://i.postimg.cc/TYYthV3v/Screenshot-2025-06-02-042103.png"
-        />
+        <meta name="twitter:image" content="https://static.eyeconnectglobal.com/site-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* <meta name="twitter:site" content="@YourSiteHandle"> */}
         <meta name="twitter:creator" content="@TheLonerider20" />

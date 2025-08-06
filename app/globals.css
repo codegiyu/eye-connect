@@ -171,127 +171,127 @@
   }
 
   .bg-hero {
-    background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../public/images/hero-bg-1.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://static.eyeconnectglobal.com/hero-bg-1.jpg');
     background-size: cover;
     background-position: center center;
   }
   .bg-outreach {
-    background: linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../public/images/outreach.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://static.eyeconnectglobal.com/outreach.jpg');
     background-size: cover;
     background-position: center bottom;
   }
   .bg-story {
-    background: linear-gradient(90deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../public/images/story.png');
+    background: linear-gradient(90deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('https://static.eyeconnectglobal.com/story.png');
     background-size: cover;
     background-position: center center;
   }
   .bg-cofounders {
-    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/cofounders.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('https://static.eyeconnectglobal.com/cofounders.jpg');
     background-size: cover;
     background-position: center center;
   }
   .bg-daniel {
-    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/daniel.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('https://static.eyeconnectglobal.com/daniel.jpg');
     background-size: cover;
     background-position: top center;
   }
   .bg-clinton {
-    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/clinton.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('https://static.eyeconnectglobal.com/clinton.jpg');
     background-size: cover;
     background-position: top center;
   }
   .bg-interview {
-    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/interview.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('https://static.eyeconnectglobal.com/interview.jpg');
     background-size: cover;
     background-position: center center;
   }
   .bg-beneficiaries {
-    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('../public/images/beneficiaries.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url('https://static.eyeconnectglobal.com/beneficiaries.jpg');
     background-size: cover;
     background-position: bottom center;
   }
 
   /* Gallery Images */
   .bg-gallery-1 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-1.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-1.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-2 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-2.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-2.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-3 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-3.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-3.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-4 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-4.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-4.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-5 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-5.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-5.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-6 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-6.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-6.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-7 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-7.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-7.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-8 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-8.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-8.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-9 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-9.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-9.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-10 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-10.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-10.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-11 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-11.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-11.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-12 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-12.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-12.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-13 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-13.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-13.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
   }
   .bg-gallery-14 {
-    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../public/images/gallery/gallery-14.jpg');
+    background: linear-gradient(90deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.eyeconnectglobal.com/gallery/gallery-14.jpg');
     background-size: cover;
     background-position: center center;
     aspect-ratio: 1.5;
